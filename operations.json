@@ -1,0 +1,16 @@
+{
+  "account": {"stats":["GET","/stats","query"],"fees":["GET","/fees","none"]},
+  "payments": {"create":["POST","/payments","body","idempotencyKey"],"get":["GET","/payments/{id}","id"],"payer":["GET","/payments/{id}/payer","id"]},
+  "donations": {"list":["GET","/donations","query"],"top":["GET","/top-donates","query"]},
+  "checkouts": {"create":["POST","/checkouts","body"],"get":["GET","/checkouts/{id}","id"]},
+  "withdrawals": {"create":["POST","/withdraw","body","idempotencyKey"],"get":["GET","/withdrawals/{id}","id"],"list":["GET","/withdrawals","query"]},
+  "cashouts": {"create":["POST","/cashout","body","idempotencyKey"],"get":["GET","/cashout/{id}","id"]},
+  "refunds": {"create":["POST","/refund","body"]},
+  "transfers": {"recipient":["GET","/transfers/internal/recipient","to"],"create":["POST","/transfers/internal","body","idempotencyKey"]},
+  "boletos": {"create":["POST","/boletos","body","idempotencyKey"]},
+  "billPayments": {"preview":["POST","/bill-payments/preview","body"],"create":["POST","/bill-payments","body","idempotencyKey"],"get":["GET","/bill-payments/{id}","id"],"list":["GET","/bill-payments","query"]},
+  "meds": {"list":["GET","/meds","query"],"get":["GET","/meds/{id}","id"]},
+  "crypto": {"createPayment":["POST","/payments/crypto","body","requestId"],"getPayment":["GET","/payments/crypto/{id}","id"],"balance":["GET","/crypto/balance","none"],"summary":["GET","/crypto/purin","none"],"operation":["GET","/crypto/purin/operations/{id}","id"],"swap":["POST","/crypto/swap","body","requestId"],"withdraw":["POST","/crypto/purin/withdraw","body","requestId"]},
+  "subaccounts": {"create":["POST","/subaccounts","body"],"list":["GET","/subaccounts","none"],"get":["GET","/subaccounts/{id}","id"],"update":["PATCH","/subaccounts/{id}","idBody"],"block":["POST","/subaccounts/{id}/block","id"],"unblock":["POST","/subaccounts/{id}/unblock","id"],"delete":["DELETE","/subaccounts/{id}","id"],"transactions":["GET","/subaccounts/{id}/transactions","idQuery"],"fund":["POST","/subaccounts/{id}/fund","idBody","idempotencyKey"],"transfer":["POST","/subaccounts/{id}/transfer","idBody","idempotencyKey"],"payout":["POST","/subaccounts/{id}/payout","idBody","idempotencyKey"],"withdraw":["POST","/subaccounts/{id}/withdraw","idBody","idempotencyKey"]},
+  "splits": {"create":["POST","/split/payment","body"],"pix":["POST","/split/pix","body"],"get":["GET","/split/payments/{id}","id"]}
+}

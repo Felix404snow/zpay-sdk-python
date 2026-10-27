@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zpay-sdk"
+version = "0.1.0"
+description = "SDK Python da API Z.PAY para aplicações de servidor"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Homepage = "https://zpaysolution.com"
+Documentation = "https://zpaysolution.com/docs/#sdk"
+Repository = "https://github.com/Felix404snow/zpay-sdk-python"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+zpay = ["py.typed"]
